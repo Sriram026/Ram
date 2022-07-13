@@ -4,4 +4,6 @@ This is Sriram
 Welcome to my page..
 I am new to this Git
 
+I wish that i will learn all the details asap.
+
 Thankyou:)
