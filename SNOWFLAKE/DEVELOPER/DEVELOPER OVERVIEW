@@ -1,0 +1,35 @@
+1.Overview
+2.Builders
+--Snowflake Devops
+--Observability
+3.snowpark Library
+--Snowpark API
+--Spark workloads on snowflake
+4.Machine Learning
+--Snowflake ML
+5.Snowpark code execution environments
+--Snowpark Container Services
+--Functions and procedures
+--Logging,Tracing and metrics
+6.Snowflake APIs
+--SF Python APIs
+--Snowflake REST APIs
+--SQL API
+7.Apps
+--Streamlit in snowflake
+--Snowflake native Apps Framework
+--Snowflake Declarative Sharing
+--Snowflake Native SDK for Connectors
+8.External; Integration
+--external Functions
+--Kafka and Spark Connectors
+9.Snowflake Scripting
+--SF Scripting Developer Guide
+10.Tools
+--Snowflake CLI
+--GIT
+11.Drivers
+--Overview
+Considerations when drivers reuse sessions
+12.References 
+--API reference
