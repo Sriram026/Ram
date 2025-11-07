@@ -1,0 +1,193 @@
+SNOWFLAKE GUIDES
+1.Snowflake Horizon Catalog
+--Use snowsight to generate object descriptions
+--Use Sql to generate object descriptions
+--contacts
+2.Applications and tools for connecting to Snowflake
+--User interfaces
+--Command-line interfaces
+--Extensions for code editiors
+--Infrastructure as Code
+--Drivers and libraries
+--Integrating with 3rd party systems
+--3rd party software
+3.Virtual Warehouses
+--Overview
+--Multi-Cluster
+--Considerations
+--Working with warehouses
+--Next-generation standard warehouses
+--Query Acceleartion service
+--Monitoring Load
+--Snowpark-Optimized warehouses
+--Interactive tables and warehouses
+4a.Databases, Tables and Views
+--Table structures
+--Temporary and Transient Tables
+--External Tables
+--Hybrid Tables
+--Interactive Tables
+--Working with tables in snowsight
+--Search Optimization service
+4b.Views
+--secure views
+--materialized views
+--Semantic Views
+--Working with Views in snowsight
+--Views,Materialized views and Dynamic tables
+--table Design
+--cloning
+--Data storage
+5.Data Types
+6.Data Integration
+--Snowflake Openflow
+--Apache Iceberg
+7.Data Engineering
+--Data Loading
+--Dynamic tables
+--Streams and Tasks
+--dbt Projects on Snowflake
+--Data Unloading
+8.Storage LifeCycle policies
+--Biling
+--Creating and Managing Policies
+--Retrieving Archived Data
+--Monitoring
+9.Migrations
+--Tools
+--Guides
+10.Queries
+--Joins
+--Subqueries
+--Querying Hierarchical Data
+--Common Table Expressions
+--Querying Semi-structured data
+--Using full-text search
+--Constructing SQL at runtime
+--Analyzing time-series data
+--Analyzing data with window functions
+--Match recognize
+--Sequences
+--Persisted Query Results
+--Distinct Counts
+--Similarity Estimation
+--Frequency Estimation
+--Estimating Percentile Values
+--Monitor query activity with Query History
+--Using Query insights to improve performance
+--Query Hash
+--Top-K pruning
+--Cancel Statements
+11.Listings
+--Organizational Listings
+--Snowflake marketplace Listings
+--Data Exchange Listings'
+--Pricing plans and offers
+--auto-fulfillment for listings
+12.Collaboration
+--Data Clean Rooms
+--Shares
+--Reader Accounts
+--VPS & Collaboration
+13.Snowflake AI&ML
+--Cross-Region inference
+--Opt out of AI features
+--Snowflake Intelligence
+--Cortex ALSQL
+--Cortex Agents
+--Snowflake Managed MCP server
+--Cortex Analyst
+--Cortex Search
+--Cortex Knowledge Extensions
+--AI Observability
+--ML Functions
+--Document AI
+--Provisioned Throughput
+--ML development and ML ops
+14.Alerts and Notifications
+--SF alerts
+--Notifications
+15.Security
+15a.Authentication
+--A policies
+--MFA
+--Federated authentication and SSO
+--Key-pair authentication and rotation
+--Programatic access tokens
+--OAuth
+--Workload identity federation
+--API authentication and secrets
+15b.Network Security
+--Malicious IP protection
+--Network Policies
+--Network Rules
+15c.Private Connectivity
+--Inbound P.C
+--Outbound P.C
+15d.Administration and authorization
+--Trust Center
+--Sessions and session policies
+--SCIM support
+--Access Control
+--Encryption
+16.Organization and Accounts
+--Introduction
+--O Admnistrators
+--O Account
+--O users
+--Managing accounts
+--connecting to your accounts
+--account identifiers
+--Trail accounts
+--Parameter management
+--User managemnet
+17.Business Continuity & Data Recovery
+--Replication introduction
+--Considerations
+--configuration and usage
+--Security integrations and network policy replication
+--Stage,pipe and load history replication
+--Git repository replication
+--Understanding cost
+--Account failover
+--Monitoring replication and failover
+--Error Notifications for replication and failover groups
+--Cient redirect overview and usage
+17a.Data recovery
+--snapshots
+--time travel
+--fail-safe
+--storage costs for historical data
+18.Performace Optimization
+--Exploring execution times
+--Optimizing query performace
+--Optimizing warehouse for performace
+--optimizing storage for performace
+--Analyzing query workloads for performace
+--snowflake optima
+19.Cost management
+--Overview
+--Understanding cost
+--Access Control
+--Visibility
+--Control
+--Opimization
+19a.Billing Management
+--accessing usage statements
+--reconciling usage statements
+--updating biling contacts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
