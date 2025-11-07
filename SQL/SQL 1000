@@ -1,0 +1,613 @@
+Inner Join
+Given Employees and Departments tables, write a query to list employee names along with their department names using an inner join.
+
+
+Left Join
+Retrieve all employees and their department names. Include employees who are not assigned to any department.
+
+
+Right Join
+List all departments and the employees in them. Include departments with no employees.
+
+
+Full Outer Join
+Combine Employees and Departments to show all possible combinations, including unmatched rows.
+
+
+Self Join
+Using a self join on Employees, find pairs of employees who report to the same manager.
+
+
+Cross Join
+Generate all combinations of employees and projects using a cross join.
+
+
+Join with Filter
+List employees in the 'Engineering' department using a join and a WHERE clause.
+
+
+Join with Aggregation
+Show department names and the total salary of employees in each department.
+
+
+Join Multiple Tables
+Join Employees, Departments, and Projects to list employee names, department names, and project names.
+
+
+Join with Subquery
+Use a subquery to find departments with more than 5 employees and join with Departments.
+
+
+Join with NULL Handling
+List employees and their department names. Replace NULL department names with 'Unassigned'.
+
+
+Join with CASE Statement
+Show employee names and a column indicating if they belong to 'Tech' or 'Non-Tech' departments.
+
+
+Join with Date Filtering
+Join Employees and Attendance to list employees who were present on '2025-01-01'.
+
+
+Join with GROUP BY
+List departments and the count of employees in each.
+
+
+Join with HAVING Clause
+List departments with average salary greater than 70,000.
+
+
+Join with DISTINCT
+List unique department names from the join of Employees and Departments.
+
+
+Join with Aliases
+Use table aliases to simplify a join between Employees and Departments.
+
+
+Join with Multiple Conditions
+Join Employees and Departments where department name is 'Sales' and location is 'Hyderabad'.
+
+
+Join with IN Clause
+List employees whose department is in a list of department IDs.
+
+
+Join with NOT IN Clause
+List employees not assigned to any department.
+
+
+
+🔹 Window Functions (21–35)
+
+
+ROW_NUMBER()
+Assign row numbers to employees ordered by salary within each department.
+
+
+RANK()
+Rank employees based on salary in descending order.
+
+
+DENSE_RANK()
+Use DENSE_RANK to rank employees with same salary equally.
+
+
+NTILE()
+Divide employees into 4 salary quartiles.
+
+
+LEAD()
+Show each employee’s salary and the next higher salary.
+
+
+LAG()
+Show each employee’s salary and the previous salary.
+
+
+FIRST_VALUE()
+Show the first hired employee in each department.
+
+
+LAST_VALUE()
+Show the last hired employee in each department.
+
+
+CUME_DIST()
+Calculate cumulative distribution of salaries.
+
+
+PERCENT_RANK()
+Show percent rank of each employee based on salary.
+
+
+Window with PARTITION BY
+Calculate average salary per department using window function.
+
+
+Window with ORDER BY
+Show running total of salaries ordered by hire date.
+
+
+Window with Multiple PARTITIONs
+Use multiple partitioning to rank employees by department and location.
+
+
+Window with Aggregates
+Show max salary per department using window function.
+
+
+Window with Filtering
+Show employees whose rank is less than or equal to 3 in their department.
+
+
+
+🔹 CTEs (36–50)
+
+
+Basic CTE
+Use a CTE to select top 5 highest paid employees.
+
+
+Recursive CTE
+Generate a sequence of numbers from 1 to 10 using a recursive CTE.
+
+
+CTE with Join
+Use a CTE to filter employees and join with departments.
+
+
+CTE with Aggregation
+Use a CTE to calculate average salary per department.
+
+
+CTE with Multiple Queries
+Chain multiple CTEs to calculate department-wise salary stats.
+
+
+CTE with UNION
+Combine two CTEs using UNION to list active and inactive employees.
+
+
+CTE with Subquery
+Use a subquery inside a CTE to filter employees by salary.
+
+
+CTE with Window Function
+Use a CTE to rank employees and filter top performers.
+
+
+CTE with DELETE Statement
+Use a CTE to identify duplicate rows and delete them.
+
+
+CTE with UPDATE Statement
+Use a CTE to update salaries of employees based on performance.
+
+
+CTE with Multiple Tables
+Use a CTE to join Employees, Departments, and Projects.
+
+
+CTE with CASE Statement
+Use a CTE to categorize employees based on salary ranges.
+
+
+CTE with GROUP BY
+Use a CTE to group employees by department and count them.
+
+
+CTE with HAVING Clause
+Use a CTE to find departments with more than 3 employees.
+
+
+CTE with EXISTS Clause
+Use a CTE to find employees who are assigned to at least one project.
+
+Top 100 Intermediate to Advanced SQL Coding Questions
+Joins & Aggregations
+1.	1. Find the top 3 customers by total purchase amount.
+Explanation: Use GROUP BY on customer ID, SUM the purchase amount, and ORDER BY descending with LIMIT 3.
+2.	2. List employees who have never made a sale.
+Explanation: Use LEFT JOIN between employees and sales, filter where sale ID is NULL.
+3.	3. Get the average salary by department.
+Explanation: GROUP BY department ID and use AVG on salary.
+4.	4. Find products that were never ordered.
+Explanation: LEFT JOIN products with orders and filter where order ID is NULL.
+5.	5. List customers who ordered more than 5 times in the last 30 days.
+Explanation: Use COUNT and GROUP BY customer ID with a WHERE clause on order date.
+6.	6. Show the most sold product in each category.
+Explanation: GROUP BY category and use MAX on quantity sold.
+7.	7. Find suppliers who supply more than 3 products.
+Explanation: GROUP BY supplier ID and use HAVING COUNT(product ID) > 3.
+8.	8. Get the total revenue per region.
+Explanation: JOIN orders with customers and regions, GROUP BY region, SUM order value.
+9.	9. List orders with more than 3 items.
+Explanation: GROUP BY order ID and use HAVING COUNT(product ID) > 3.
+10.	10. Find the employee with the highest sales in each month.
+Explanation: Use GROUP BY month and employee ID, SUM sales, and use RANK or MAX.
+11.	11. Show customers who ordered from more than one country.
+Explanation: GROUP BY customer ID and use COUNT(DISTINCT country) > 1.
+12.	12. List products with no reviews.
+Explanation: LEFT JOIN products with reviews and filter where review ID is NULL.
+13.	13. Find the most frequent buyer per product.
+Explanation: GROUP BY product ID and customer ID, COUNT orders, use RANK.
+14.	14. Get the number of orders per day for the last 7 days.
+Explanation: GROUP BY order date and COUNT orders with a WHERE clause.
+15.	15. List employees who have worked in more than one department.
+Explanation: GROUP BY employee ID and COUNT(DISTINCT department ID) > 1.
+16.	16. Find the average order value per customer.
+Explanation: GROUP BY customer ID and use AVG(order total).
+17.	17. Show the top 5 products by revenue.
+Explanation: GROUP BY product ID and use SUM(price * quantity), ORDER BY DESC LIMIT 5.
+18.	18. List customers who ordered the same product more than once.
+Explanation: GROUP BY customer ID, product ID and use HAVING COUNT(*) > 1.
+19.	19. Find the product with the highest return rate.
+Explanation: Calculate return rate as returns/orders and use MAX.
+20.	20. Get the number of active users per month.
+Explanation: GROUP BY month and COUNT(DISTINCT user ID) where activity exists.
+Subqueries & CTEs
+21.	1. Find customers who spent more than the average.
+Explanation: Use a subquery to calculate average spend and filter customers above it.
+22.	2. List products priced above the category average.
+Explanation: Use a correlated subquery to compare product price with category average.
+23.	3. Get the second highest salary in each department.
+Explanation: Use ROW_NUMBER or DENSE_RANK in a CTE partitioned by department.
+24.	4. Find orders with total value above the average.
+Explanation: Use a subquery to get average order value and filter orders above it.
+25.	5. List employees who earn more than their manager.
+Explanation: Self-join employees table on manager ID and compare salaries.
+26.	6. Show customers who placed their first order in the last 30 days.
+Explanation: Use a subquery to get MIN(order date) per customer and filter.
+27.	7. Find the most recent order per customer.
+Explanation: Use ROW_NUMBER or MAX(order date) grouped by customer.
+28.	8. Get the top 3 products by rating in each category.
+Explanation: Use RANK or ROW_NUMBER partitioned by category.
+29.	9. List customers who ordered only once.
+Explanation: GROUP BY customer ID and use HAVING COUNT(order ID) = 1.
+30.	10. Find the longest-serving employee per department.
+Explanation: Use ROW_NUMBER or MIN(hire date) partitioned by department.
+31.	11. Get the most recent login per user.
+Explanation: Use MAX(login date) grouped by user ID.
+32.	12. List products with increasing monthly sales.
+Explanation: Use LAG or compare monthly aggregates in a CTE.
+33.	13. Find the most active customer per region.
+Explanation: GROUP BY region and customer ID, COUNT orders, use RANK.
+34.	14. Show the highest-rated product per supplier.
+Explanation: GROUP BY supplier ID and use MAX(rating).
+35.	15. List employees who joined before their manager.
+Explanation: Self-join employees table and compare hire dates.
+36.	16. Find the most common order value.
+Explanation: GROUP BY order total and use COUNT, ORDER BY DESC LIMIT 1.
+37.	17. Get the top 5 customers by number of orders.
+Explanation: GROUP BY customer ID and use COUNT, ORDER BY DESC LIMIT 5.
+38.	18. List products with no sales in the last 90 days.
+Explanation: LEFT JOIN with sales and filter by date range.
+39.	19. Find the most returned product per category.
+Explanation: GROUP BY category and product ID, use COUNT and RANK.
+40.	20. Show the most recent hire per department.
+Explanation: Use ROW_NUMBER or MAX(hire date) partitioned by department.
+Window Functions
+41.	1. Rank employees by salary within each department.
+Explanation: Use RANK() OVER (PARTITION BY department ORDER BY salary DESC).
+42.	2. Find the running total of sales per day.
+Explanation: Use SUM(sales) OVER (PARTITION BY date ORDER BY time ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW).
+43.	3. Show the difference in salary from the department average.
+Explanation: Use AVG(salary) OVER (PARTITION BY department) and subtract from salary.
+44.	4. Get the cumulative revenue per customer.
+Explanation: Use SUM(revenue) OVER (PARTITION BY customer ORDER BY date).
+45.	5. List the top 3 orders per customer.
+Explanation: Use ROW_NUMBER() OVER (PARTITION BY customer ORDER BY order value DESC).
+46.	6. Find the month-over-month growth in sales.
+Explanation: Use LAG(sales) OVER (ORDER BY month) and compute difference.
+47.	7. Show the first and last order date per customer.
+Explanation: Use MIN and MAX with PARTITION BY customer.
+48.	8. Get the average rating per product over time.
+Explanation: Use AVG(rating) OVER (PARTITION BY product ORDER BY date).
+49.	9. Find the highest sale per employee.
+Explanation: Use MAX(sale) OVER (PARTITION BY employee).
+50.	10. Show the change in stock level per product.
+Explanation: Use LAG(stock) OVER (PARTITION BY product ORDER BY date).
+51.	11. Rank products by sales within each category.
+Explanation: Use RANK() OVER (PARTITION BY category ORDER BY sales DESC).
+52.	12. Get the moving average of daily revenue.
+Explanation: Use AVG(revenue) OVER (ORDER BY date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW).
+53.	13. List customers with increasing order frequency.
+Explanation: Use COUNT OVER and compare with previous values.
+54.	14. Find the difference between current and previous order value.
+Explanation: Use LAG(order value) OVER (PARTITION BY customer ORDER BY date).
+55.	15. Show the number of days between orders per customer.
+Explanation: Use LAG(order date) and DATEDIFF.
+56.	16. Get the first login date per user.
+Explanation: Use MIN(login date) OVER (PARTITION BY user).
+57.	17. Find the top 3 suppliers by product count.
+Explanation: Use COUNT and RANK OVER (PARTITION BY supplier).
+58.	18. Show the percentage contribution of each product to total sales.
+Explanation: Use SUM(product sales)/SUM(total sales) OVER ().
+59.	19. Get the lag in delivery time per order.
+Explanation: Use LAG(delivery time) OVER (PARTITION BY customer ORDER BY order date).
+60.	20. Find the most recent activity per user.
+Explanation: Use ROW_NUMBER() OVER (PARTITION BY user ORDER BY activity date DESC).
+Advanced Aggregations
+61.	1. Find the average time between orders per customer.
+Explanation: Use LAG(order date) and DATEDIFF, then AVG.
+62.	2. List products with sales above the 75th percentile.
+Explanation: Use PERCENTILE_CONT(0.75) OVER () and filter.
+63.	3. Get the standard deviation of order values.
+Explanation: Use STDDEV(order value).
+64.	4. Find the correlation between price and rating.
+Explanation: Use CORR(price, rating).
+65.	5. Show the distribution of order values.
+Explanation: GROUP BY order value and COUNT.
+66.	6. List customers with order frequency above the median.
+Explanation: Use MEDIAN or PERCENTILE_CONT(0.5) and filter.
+67.	7. Get the mode of product ratings.
+Explanation: GROUP BY rating and use COUNT, ORDER BY DESC LIMIT 1.
+68.	8. Find the variance in monthly revenue.
+Explanation: Use VARIANCE(revenue) GROUP BY month.
+69.	9. Show the skewness of order values.
+Explanation: Use advanced statistical functions or calculate manually.
+70.	10. List products with consistent monthly sales.
+Explanation: Use STDDEV of monthly sales and filter low values.
+71.	11. Get the interquartile range of delivery times.
+Explanation: Use PERCENTILE_CONT(0.75) - PERCENTILE_CONT(0.25).
+72.	12. Find the coefficient of variation in product prices.
+Explanation: Use STDDEV(price)/AVG(price).
+73.	13. Show the histogram of customer order counts.
+Explanation: GROUP BY order count buckets.
+74.	14. List categories with high rating variance.
+Explanation: GROUP BY category and use VARIANCE(rating).
+75.	15. Get the average rating per supplier.
+Explanation: GROUP BY supplier and use AVG(rating).
+76.	16. Find the most common delivery time.
+Explanation: GROUP BY delivery time and use COUNT.
+77.	17. Show the distribution of employee tenure.
+Explanation: GROUP BY tenure buckets.
+78.	18. List products with outlier prices.
+Explanation: Use IQR or standard deviation to detect outliers.
+79.	19. Get the average number of items per order.
+Explanation: Use AVG(item count) GROUP BY order.
+80.	20. Find the most frequent order size.
+Explanation: GROUP BY item count and use COUNT, ORDER BY DESC LIMIT 1.
+Performance Optimization
+81.	1. Optimize a query to find top-selling products.
+Explanation: Use indexes on product ID and avoid unnecessary joins.
+82.	2. Rewrite a query using CTEs for readability.
+Explanation: Break complex subqueries into named CTEs.
+83.	3. Use indexes to speed up customer search.
+Explanation: Create indexes on frequently filtered columns.
+84.	4. Avoid full table scan in product lookup.
+Explanation: Use WHERE clause with indexed columns.
+85.	5. Optimize join between large tables.
+Explanation: Use indexed join keys and filter early.
+86.	6. Use partitioning to improve query performance.
+Explanation: Partition large tables by date or region.
+87.	7. Rewrite correlated subquery using JOIN.
+Explanation: Convert subquery to JOIN with GROUP BY.
+88.	8. Use EXISTS instead of IN for performance.
+Explanation: EXISTS is often faster for subqueries.
+89.	9. Avoid unnecessary GROUP BY in aggregation.
+Explanation: Only group by required columns.
+90.	10. Use window functions instead of self-joins.
+Explanation: Window functions are more efficient for ranking.
+91.	11. Optimize query to find duplicate orders.
+Explanation: GROUP BY order fields and use HAVING COUNT(*) > 1.
+92.	12. Use UNION ALL instead of UNION.
+Explanation: UNION ALL is faster if duplicates are not a concern.
+93.	13. Avoid sorting large datasets unnecessarily.
+Explanation: Only ORDER BY when needed.
+94.	14. Use LIMIT with ORDER BY efficiently.
+Explanation: Combine ORDER BY with LIMIT to reduce sorting.
+95.	15. Optimize query to find inactive users.
+Explanation: Use LEFT JOIN with activity and filter NULLs.
+96.	16. Use materialized views for frequent queries.
+Explanation: Precompute and store results for reuse.
+97.	17. Avoid nested subqueries in reporting.
+Explanation: Flatten queries using JOINs or CTEs.
+98.	18. Use indexing on foreign keys.
+Explanation: Improve join performance with indexed keys.
+99.	19. Optimize query to find top customers by region.
+Explanation: GROUP BY region and customer, use RANK.
+100.	20. Use query plan to identify bottlenecks.
+Explanation: Analyze execution plan to optimize queries.
+
+
+
+🔹 Window Functions (21–40)
+21. ROW_NUMBER()
+Table: Employees
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EmpIDNameDeptIDSalary1Alice101600002Bob101750003Carol102800004Dave10272000
+Question:
+Assign row numbers to employees ordered by salary within each department.
+
+22. RANK()
+Question:
+Rank employees based on salary in descending order. Show ties with same rank.
+
+23. DENSE_RANK()
+Question:
+Use DENSE_RANK to rank employees with same salary equally, without gaps in ranking.
+
+24. NTILE()
+Question:
+Divide employees into 4 salary quartiles using NTILE.
+
+25. LEAD()
+Question:
+Show each employee’s salary and the next higher salary using LEAD.
+
+26. LAG()
+Question:
+Show each employee’s salary and the previous salary using LAG.
+
+27. FIRST_VALUE()
+Question:
+Show the first hired employee in each department using FIRST_VALUE.
+
+28. LAST_VALUE()
+Table: Employees
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EmpIDNameDeptIDHireDate1Alice1012020-01-012Bob1012021-06-153Carol1022022-03-104Dave1022023-07-20
+Question:
+Show the last hired employee in each department using LAST_VALUE.
+
+29. CUME_DIST()
+Question:
+Calculate cumulative distribution of salaries to understand percentile position.
+
+30. PERCENT_RANK()
+Question:
+Show percent rank of each employee based on salary.
+
+31. Window with PARTITION BY
+Question:
+Calculate average salary per department using a window function with PARTITION BY.
+
+32. Window with ORDER BY
+Question:
+Show running total of salaries ordered by hire date using SUM() OVER(ORDER BY HireDate).
+
+33. Window with Multiple PARTITIONs
+Table: Employees
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EmpIDNameDeptIDLocationSalary1Alice101NY600002Bob101NY750003Carol101SF800004Dave102SF72000
+Question:
+Use multiple partitioning to rank employees by department and location.
+
+34. Window with Aggregates
+Question:
+Show max salary per department using MAX() OVER(PARTITION BY DeptID).
+
+35. Window with Filtering
+Question:
+Show employees whose rank is less than or equal to 3 in their department.
+
+36. Combining Window Functions
+Question:
+Use ROW_NUMBER and RANK together to compare employee positions in salary hierarchy.
+
+37. Window with COUNT()
+Question:
+Count number of employees in each department using COUNT() OVER(PARTITION BY DeptID).
+
+38. Window with AVG()
+Question:
+Show each employee’s salary and department average salary side by side.
+
+39. Window with MIN() and MAX()
+Question:
+Show each employee’s salary along with min and max salary in their department.
+
+40. Window with Conditional Logic
+Question:
+Use CASE inside a window function to flag top 3 earners in each department.
+
